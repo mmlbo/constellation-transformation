@@ -331,6 +331,39 @@
                           "depends_on":  [
 
                                          ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "00_GOVERNANCE/CONSTEL_N5_GOV_README_V8.2.2.html",
+                          "id":  "CONSTEL_N5_GOV_README_V8.2.2",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "00_GOVERNANCE/CONSTEL_N5_GOV_METADATA_V8.2.2.html",
+                          "id":  "CONSTEL_N5_GOV_METADATA_V8.2.2",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "01_TRANSFORMATION_ENGINE/CONSTEL_N3_ROADMAP_V8.2.2.html",
+                          "id":  "CONSTEL_N3_ROADMAP_V8.2.2",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
                       }
                   ]
 }
