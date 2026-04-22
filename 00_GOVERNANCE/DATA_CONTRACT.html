@@ -1,1 +1,37 @@
-﻿<!DOCTYPE html><html><head><meta charset='UTF-8'><title>DATA_CONTRACT.html</title></head><body><h1>DATA_CONTRACT.html</h1><p>Document à compléter</p></body></html>
+﻿<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>DATA_CONTRACT – DMS Constellation</title>
+<style>body{font-family:'Segoe UI',Arial;padding:40px;max-width:1000px;margin:0 auto;background:#f0f2f5;}
+.container{background:white;padding:30px;border-radius:12px;}
+h1{color:#2c5e2e;}h2{color:#3a7b3d;}table{width:100%;border-collapse:collapse;margin:15px 0;}
+th,td{border:1px solid #ddd;padding:8px;text-align:left;}th{background:#2c5e2e;color:white;}
+.back{margin-top:20px;display:inline-block;background:#2c5e2e;color:white;padding:8px 16px;border-radius:20px;text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📋 DATA_CONTRACT – Règles de qualité des données</h1>
+
+<h2>1. Source unique de vérité</h2>
+<p>Le fichier <code>06_DATA_SYSTEM/Excel_PMO_source.html</code> est l'unique source pour le pilotage transformation.</p>
+
+<h2>2. Règles de qualité par champ</h2>
+<table>
+<th>Champ</th><th>Règle</th><th>Action si violation</th>
+    <tr><td>ID</td><td>Obligatoire, unique</td><td>Rejet de la ligne</td></tr>
+    <tr><td>Phase</td><td>P1,P2,P3,P4,Transverse</td><td>Rejet de la ligne</td></tr>
+    <tr><td>Statut</td><td>Pas commencé/En cours/Terminé/Bloqué</td><td>Rejet de la ligne</td></tr>
+    <tr><td>Classe</td><td>M/Q/C</td><td>Rejet de la ligne</td></tr>
+</table>
+
+<h2>3. Sanctions</h2>
+<ul>
+<li>Données incomplètes >5% → Suspension reporting COMEX</li>
+<li>Non-respect délai mise à jour → Alerte DAF</li>
+<li>Contournement du fichier source → Décision COMEX</li>
+</ul>
+
+<a href="../index.html" class="back">← Retour</a>
+</div>
+</body>
+</html>
