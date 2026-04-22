@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)file:///C:/Users/a.adnane/Downloads/deepseek_html_20260422_1bc5d2.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Protocole de création du DMS – Constellation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #f0f2f5;
+            color: #1a1a1a;
+        }
+        .document {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c5e2e;
+            border-bottom: 3px solid #2c5e2e;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #3a7b3d;
+            margin-top: 30px;
+            border-left: 4px solid #3a7b3d;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #4a8c4d;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #2c5e2e;
+            color: white;
+        }
+        .step {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #2c5e2e;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .code {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<div class="document">
+    <h1>📋 Protocole de création du système documentaire DMS</h1>
+    <p><strong>Code :</strong> CONSTEL_GUIDE_001</p>
+    <p><strong>Version :</strong> V1.0</p>
+    <p><strong>Date :</strong> 22/04/2026</p>
+    <p><strong>Auteur :</strong> DAF</p>
+
+    <h2>1. Objectif</h2>
+    <p>Ce protocole décrit les étapes pour créer et maintenir le système documentaire (DMS) de la transformation Constellation.</p>
+
+    <h2>2. Structure des dossiers</h2>
+    <table>
+        <thead><tr><th>Dossier</th><th>Contenu</th></tr></thead>
+        <tbody>
+            <tr><td class="text-bold">00_GOVERNANCE</td><td>Règles, chartes, principes directeurs</td></tr>
+            <tr><td class="text-bold">01_TRANSFORMATION_ENGINE</td><td>Roadmap, trajectoire, dépendances</td></tr>
+            <tr><td class="text-bold">02_DECISION_SYSTEM</td><td>Décisions, arbitrages, traçabilité</td></tr>
+            <tr><td class="text-bold">03_AUDIT_READY</td><td>Contrôle interne, conformité</td></tr>
+            <tr><td class="text-bold">04_PMO</td><td>Gestion de projet, Gantt, RAID</td></tr>
+            <tr><td class="text-bold">05_OPERATIONNEL_FINANCE</td><td>Processus comptables</td></tr>
+            <tr><td class="text-bold">06_DATA_SYSTEM</td><td>Données, KPI, référentiels</td></tr>
+            <tr><td class="text-bold">07_KPI_REPORTING</td><td>Dashboards, reporting</td></tr>
+            <tr><td class="text-bold">REFERENTIEL_DOCS</td><td>Normes, standards</td></tr>
+            <tr><td class="text-bold">GUIDE_DE_NOMMAGE</td><td>Documentation du système</td></tr>
+            <tr><td class="text-bold">99_ARCHIVE</td><td>Historique et archives</td></tr>
+        </tbody>
+    </table>
+
+    <h2>3. Création du système</h2>
+
+    <div class="step">
+        <h3>Étape 1 – Créer la structure des dossiers</h3>
+        <div class="code">
+            $root = "C:\Users\a.adnane\constellation-dms"<br>
+            $dirs = @("00_GOVERNANCE","01_TRANSFORMATION_ENGINE","02_DECISION_SYSTEM","03_AUDIT_READY","04_PMO","05_OPERATIONNEL_FINANCE","06_DATA_SYSTEM","07_KPI_REPORTING","REFERENTIEL_DOCS","GUIDE_DE_NOMMAGE","99_ARCHIVE")<br>
+            New-Item -ItemType Directory -Path $root -Force | Out-Null<br>
+            foreach ($d in $dirs) { New-Item -ItemType Directory -Path "$root/$d" -Force | Out-Null }
+        </div>
+    </div>
+
+    <div class="step">
+        <h3>Étape 2 – Créer le Control Tower (index.html)</h3>
+        <div class="code">
+            # Exécuter le script de création de l'index.html<br>
+            # (voir le script complet dans l'échange)
+        </div>
+    </div>
+
+    <div class="step">
+        <h3>Étape 3 – Créer les pages d'accueil des dossiers</h3>
+        <div class="code">
+            foreach ($d in $dirs) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;$content = "&lt;!DOCTYPE html&gt;...&lt;h1&gt;$d&lt;/h1&gt;..."<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Set-Content -Path "$root/$d/index.html" -Value $content -Encoding UTF8<br>
+            }
+        </div>
+    </div>
+
+    <div class="step">
+        <h3>Étape 4 – Ajouter les documents existants</h3>
+        <p>Copier les fichiers HTML dans les dossiers correspondants :</p>
+        <ul>
+            <li><code>00_GOVERNANCE/</code> : README_racine.html, DATA_CONTRACT.html, Operating_Model_DAF.html, Charte_gouvernance.html, Regles_decision_COMEX.html, Principes_M_Q_C.html</li>
+            <li><code>01_TRANSFORMATION_ENGINE/</code> : Plan_transformation_V8.html, TRF_MAIN.html</li>
+            <li><code>02_DECISION_SYSTEM/</code> : DECISION_TRACE.html, COMEX_decisions_actees.html, Arbitrages_M_Q_C.html, Overrides_traces.html</li>
+            <li><code>04_PMO/</code> : Gantt_detail.html, RAID_log.html, Suivi_quotidien.html</li>
+            <li><code>05_OPERATIONNEL_FINANCE/</code> : Processus_comptables.html, Cloture_consolidee.html, Tresorerie.html, Controle_de_gestion.html</li>
+            <li><code>06_DATA_SYSTEM/</code> : Excel_PMO_source.html, KPI_DEFINITION_REGISTRY.html</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h3>Étape 5 – Tester la navigation</h3>
+        <div class="code">
+            Invoke-Item "$root/index.html"
+        </div>
+    </div>
+
+    <div class="step">
+        <h3>Étape 6 – Pousser sur GitHub (optionnel)</h3>
+        <div class="code">
+            cd $root<br>
+            git init<br>
+            git add .<br>
+            git commit -m "DMS Constellation V8.2.2"<br>
+            git remote add origin https://github.com/mmibo/constellation-transformation.git<br>
+            git push -u origin main
+        </div>
+    </div>
+
+    <h2>4. Règles de nommage</h2>
+    
+        TypeFormatExemple
+        
+            Document HTML[TYPE]_[OBJET]_V[VERSION].htmlGOV_Charte_V8.2.2.html
+            Page d'accueilindex.htmlindex.html
+            Métadonnéesmeta.jsonmeta.json
+            DocumentationREADME.mdREADME.md
+        
+    
+
+    <h2>5. Règles de versioning</h2>
+    <ul>
+        <li><strong>V1.0</strong> : Première version</li>
+        <li><strong>V1.1, V1.2</strong> : Évolutions mineures</li>
+        <li><strong>V2.0</strong> : Changement majeur</li>
+        <li><strong>V8.2.2</strong> : Version alignée sur le document de transformation</li>
+    </ul>
+
+    <h2>6. Maintenance</h2>
+    <ul>
+        <li>Mettre à jour <code>meta.json</code> à chaque modification</li>
+        <li>Incrémenter la version dans le nom du fichier</li>
+        <li>Mettre à jour le <code>index.html</code> du dossier si nécessaire</li>
+        <li>Commit Git après chaque changement significatif</li>
+    </ul>
+
+    <h2>7. Contact</h2>
+    <p>Pour toute question : <strong>DAF</strong></p>
+
+    <div class="footer">
+        <p>Protocole de création du DMS – Constellation Transformation – V1.0</p>
+        <p>Emplacement : GUIDE_DE_NOMMAGE/PROTOCOLE_CREATION_DMS.html</p>
+    </div>
+</div>
+
+</body></html>

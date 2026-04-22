@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Constellation DMS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; padding: 40px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        h1 { color: #2c5e2e; border-bottom: 3px solid #2c5e2e; padding-bottom: 10px; margin-bottom: 10px; }
+        .subtitle { color: #6c757d; margin-bottom: 30px; font-size: 14px; }
+        .stats { background: white; border-radius: 12px; padding: 20px; margin-bottom: 30px; display: flex; justify-content: space-around; flex-wrap: wrap; }
+        .stat { text-align: center; }
+        .stat-number { font-size: 32px; font-weight: bold; color: #2c5e2e; }
+        .stat-label { font-size: 12px; color: #6c757d; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+        .card-header { background: #2c5e2e; color: white; padding: 15px 20px; font-weight: bold; font-size: 18px; }
+        .card-body { padding: 15px 20px; }
+        .card-body p { color: #6c757d; font-size: 13px; margin-bottom: 15px; }
+        .card-body a { background: #2c5e2e; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; display: inline-block; }
+        .card-body a:hover { background: #1a4d1a; }
+        .footer { margin-top: 40px; text-align: center; font-size: 12px; color: #6c757d; padding-top: 20px; border-top: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📁 Constellation Transformation</h1>
+    <div class="subtitle">Document Management System – V8.2.2 – Source unique de vérité</div>
+
+    <div class="stats">
+        <div class="stat"><div class="stat-number">11</div><div class="stat-label">Sections</div></div>
+        <div class="stat"><div class="stat-number">V8.2.2</div><div class="stat-label">Version</div></div>
+        <div class="stat"><div class="stat-number">✅</div><div class="stat-label">Audit-ready</div></div>
+    </div>
+
+    <div class="grid">
+        <div class="card"><div class="card-header">📜 00_GOVERNANCE</div><div class="card-body"><p>Règles, chartes, principes directeurs</p><a href="00_GOVERNANCE/">Accéder</a></div></div>
+        <div class="card"><div class="card-header">⚙️ 01_TRANSFORMATION_ENGINE</div><div class="card-body"><p>Roadmap, trajectoire, dépendances</p><a href="01_TRANSFORMATION_ENGINE/">Accéder</a></div></div>
+        <div class="card"><div class="card-header">⚖️ 02_DECISION_SYSTEM</div><div class="card-body"><p>Décisions, arbitrages, traçabilité</p><a href="02_DECISION_SYSTEM/">Accéder</a></div></div>
+        <div class="card"><div class="card-header">🔍 03_AUDIT_READY</div><div class="card-body"><p>Contrôle interne, conformité</p><a href="03_AUDIT_READY/">Accéder</a></div></div>
+        <div class="card"><div class="card-header">📋 04_PMO</div><div class="card-body"><p>Gestion de projet, Gantt, RAID</p><a href="04_PMO/">Accéder</a></div></div>
+        <div class="card"><div class="card-header">💰 05_OPERATIONNEL_FINANCE</div><div class="card-body"><p>Processus comptables</p><a href="05_OPERATIONNEL_FINANCE/">Accéder</a></div></div>
+        <div class="card"><div class="card-header">🗄️ 06_DATA_SYSTEM</div><div class="card-body"><p>Données, KPI, référentiels</p><a href="06_DATA_SYSTEM/">Accéder</a></div></div>
+        <div class="card"><div class="card-header">📊 07_KPI_REPORTING</div><div class="card-body"><p>Dashboards, reporting</p><a href="07_KPI_REPORTING/">Accéder</a></div></div>
+        <div class="card"><div class="card-header">📚 REFERENTIEL_DOCS</div><div class="card-body"><p>Normes, standards</p><a href="REFERENTIEL_DOCS/">Accéder</a></div></div>
+        <div class="card"><div class="card-header">📖 GUIDE_DE_NOMMAGE</div><div class="card-body"><p>Documentation du système</p><a href="GUIDE_DE_NOMMAGE/">Accéder</a></div></div>
+        <div class="card"><div class="card-header">🗄️ 99_ARCHIVE</div><div class="card-body"><p>Historique et archives</p><a href="99_ARCHIVE/">Accéder</a></div></div>
+    </div>
+
+    <div class="footer">
+        <p>Constellation Transformation – DMS V8.2.2</p>
+        <p>Généré le ' + (Get-Date -Format "dd/MM/yyyy HH:mm") + '</p>
+    </div>
+</div>
+</body>
+</html>

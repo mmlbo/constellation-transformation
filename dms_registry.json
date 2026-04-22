@@ -1,0 +1,336 @@
+﻿{
+    "last_audit":  "2026-04-22",
+    "version":  "V4",
+    "documents":  [
+                      {
+                          "status":  "active",
+                          "path":  "00_GOVERNANCE/CHARTE_COMEX.html",
+                          "id":  "CHARTE_COMEX",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "00_GOVERNANCE/Charte_gouvernance.html",
+                          "id":  "Charte_gouvernance",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "00_GOVERNANCE/DATA_CONTRACT.html",
+                          "id":  "DATA_CONTRACT",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "00_GOVERNANCE/Operating_Model_DAF.html",
+                          "id":  "Operating_Model_DAF",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "00_GOVERNANCE/Principes_M_Q_C.html",
+                          "id":  "Principes_M_Q_C",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "00_GOVERNANCE/README_racine.html",
+                          "id":  "README_racine",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "00_GOVERNANCE/Regles_decision_COMEX.html",
+                          "id":  "Regles_decision_COMEX",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "01_TRANSFORMATION_ENGINE/Diagnostic_SI.html",
+                          "id":  "Diagnostic_SI",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "01_TRANSFORMATION_ENGINE/Donnees_financieres.html",
+                          "id":  "Donnees_financieres",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "01_TRANSFORMATION_ENGINE/Executive_summary.html",
+                          "id":  "Executive_summary",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "01_TRANSFORMATION_ENGINE/Organisation_actuelle.html",
+                          "id":  "Organisation_actuelle",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "01_TRANSFORMATION_ENGINE/Plan_transformation_V8.html",
+                          "id":  "Plan_transformation_V8",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "01_TRANSFORMATION_ENGINE/Risques_juridiques.html",
+                          "id":  "Risques_juridiques",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "01_TRANSFORMATION_ENGINE/TRF_MAIN.html",
+                          "id":  "TRF_MAIN",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "02_DECISION_SYSTEM/Arbitrages_M_Q_C.html",
+                          "id":  "Arbitrages_M_Q_C",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "02_DECISION_SYSTEM/COMEX_decisions_actees.html",
+                          "id":  "COMEX_decisions_actees",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "02_DECISION_SYSTEM/DECISION_TRACE.html",
+                          "id":  "DECISION_TRACE",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "02_DECISION_SYSTEM/Overrides_traces.html",
+                          "id":  "Overrides_traces",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "04_PMO/Gantt_detail.html",
+                          "id":  "Gantt_detail",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "04_PMO/RAID_log.html",
+                          "id":  "RAID_log",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "04_PMO/Suivi_quotidien.html",
+                          "id":  "Suivi_quotidien",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "05_OPERATIONNEL_FINANCE/Cloture_consolidee.html",
+                          "id":  "Cloture_consolidee",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "05_OPERATIONNEL_FINANCE/Controle_de_gestion.html",
+                          "id":  "Controle_de_gestion",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "05_OPERATIONNEL_FINANCE/Processus_comptables.html",
+                          "id":  "Processus_comptables",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "05_OPERATIONNEL_FINANCE/Tresorerie.html",
+                          "id":  "Tresorerie",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "06_DATA_SYSTEM/REFERENTIELS_STRUCTURES/KPI_DEFINITION_REGISTRY.html",
+                          "id":  "KPI_DEFINITION_REGISTRY",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "06_DATA_SYSTEM/REFERENTIELS_STRUCTURES/Referentiel_entites.html",
+                          "id":  "Referentiel_entites",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "07_KPI_REPORTING/Visualisations_automatisees/PowerBI_Executive_Dashboard.html",
+                          "id":  "PowerBI_Executive_Dashboard",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "GUIDE_DE_NOMMAGE/PROTOCOLE_CREATION_DMS.html",
+                          "id":  "PROTOCOLE_CREATION_DMS",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      },
+                      {
+                          "status":  "active",
+                          "path":  "graph_view.html",
+                          "id":  "graph_view",
+                          "impacted_by":  [
+
+                                          ],
+                          "depends_on":  [
+
+                                         ]
+                      }
+                  ]
+}

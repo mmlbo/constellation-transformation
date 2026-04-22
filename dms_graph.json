@@ -1,0 +1,157 @@
+﻿{
+    "edges":  [
+
+              ],
+    "nodes":  [
+                  {
+                      "label":  "CHARTE_COMEX",
+                      "group":  "00_GOVERNANCE",
+                      "id":  "CHARTE_COMEX"
+                  },
+                  {
+                      "label":  "Charte_gouvernance",
+                      "group":  "00_GOVERNANCE",
+                      "id":  "Charte_gouvernance"
+                  },
+                  {
+                      "label":  "DATA_CONTRACT",
+                      "group":  "00_GOVERNANCE",
+                      "id":  "DATA_CONTRACT"
+                  },
+                  {
+                      "label":  "Operating_Model_DAF",
+                      "group":  "00_GOVERNANCE",
+                      "id":  "Operating_Model_DAF"
+                  },
+                  {
+                      "label":  "Principes_M_Q_C",
+                      "group":  "00_GOVERNANCE",
+                      "id":  "Principes_M_Q_C"
+                  },
+                  {
+                      "label":  "README_racine",
+                      "group":  "00_GOVERNANCE",
+                      "id":  "README_racine"
+                  },
+                  {
+                      "label":  "Regles_decision_COMEX",
+                      "group":  "00_GOVERNANCE",
+                      "id":  "Regles_decision_COMEX"
+                  },
+                  {
+                      "label":  "Diagnostic_SI",
+                      "group":  "01_TRANSFORMATION_ENGINE",
+                      "id":  "Diagnostic_SI"
+                  },
+                  {
+                      "label":  "Donnees_financieres",
+                      "group":  "01_TRANSFORMATION_ENGINE",
+                      "id":  "Donnees_financieres"
+                  },
+                  {
+                      "label":  "Executive_summary",
+                      "group":  "01_TRANSFORMATION_ENGINE",
+                      "id":  "Executive_summary"
+                  },
+                  {
+                      "label":  "Organisation_actuelle",
+                      "group":  "01_TRANSFORMATION_ENGINE",
+                      "id":  "Organisation_actuelle"
+                  },
+                  {
+                      "label":  "Plan_transformation_V8",
+                      "group":  "01_TRANSFORMATION_ENGINE",
+                      "id":  "Plan_transformation_V8"
+                  },
+                  {
+                      "label":  "Risques_juridiques",
+                      "group":  "01_TRANSFORMATION_ENGINE",
+                      "id":  "Risques_juridiques"
+                  },
+                  {
+                      "label":  "TRF_MAIN",
+                      "group":  "01_TRANSFORMATION_ENGINE",
+                      "id":  "TRF_MAIN"
+                  },
+                  {
+                      "label":  "Arbitrages_M_Q_C",
+                      "group":  "02_DECISION_SYSTEM",
+                      "id":  "Arbitrages_M_Q_C"
+                  },
+                  {
+                      "label":  "COMEX_decisions_actees",
+                      "group":  "02_DECISION_SYSTEM",
+                      "id":  "COMEX_decisions_actees"
+                  },
+                  {
+                      "label":  "DECISION_TRACE",
+                      "group":  "02_DECISION_SYSTEM",
+                      "id":  "DECISION_TRACE"
+                  },
+                  {
+                      "label":  "Overrides_traces",
+                      "group":  "02_DECISION_SYSTEM",
+                      "id":  "Overrides_traces"
+                  },
+                  {
+                      "label":  "Gantt_detail",
+                      "group":  "04_PMO",
+                      "id":  "Gantt_detail"
+                  },
+                  {
+                      "label":  "RAID_log",
+                      "group":  "04_PMO",
+                      "id":  "RAID_log"
+                  },
+                  {
+                      "label":  "Suivi_quotidien",
+                      "group":  "04_PMO",
+                      "id":  "Suivi_quotidien"
+                  },
+                  {
+                      "label":  "Cloture_consolidee",
+                      "group":  "05_OPERATIONNEL_FINANCE",
+                      "id":  "Cloture_consolidee"
+                  },
+                  {
+                      "label":  "Controle_de_gestion",
+                      "group":  "05_OPERATIONNEL_FINANCE",
+                      "id":  "Controle_de_gestion"
+                  },
+                  {
+                      "label":  "Processus_comptables",
+                      "group":  "05_OPERATIONNEL_FINANCE",
+                      "id":  "Processus_comptables"
+                  },
+                  {
+                      "label":  "Tresorerie",
+                      "group":  "05_OPERATIONNEL_FINANCE",
+                      "id":  "Tresorerie"
+                  },
+                  {
+                      "label":  "KPI_DEFINITION_REGISTRY",
+                      "group":  "06_DATA_SYSTEM",
+                      "id":  "KPI_DEFINITION_REGISTRY"
+                  },
+                  {
+                      "label":  "Referentiel_entites",
+                      "group":  "06_DATA_SYSTEM",
+                      "id":  "Referentiel_entites"
+                  },
+                  {
+                      "label":  "PowerBI_Executive_Dashboard",
+                      "group":  "07_KPI_REPORTING",
+                      "id":  "PowerBI_Executive_Dashboard"
+                  },
+                  {
+                      "label":  "PROTOCOLE_CREATION_DMS",
+                      "group":  "GUIDE_DE_NOMMAGE",
+                      "id":  "PROTOCOLE_CREATION_DMS"
+                  },
+                  {
+                      "label":  "graph_view",
+                      "group":  "graph_view.html",
+                      "id":  "graph_view"
+                  }
+              ]
+}

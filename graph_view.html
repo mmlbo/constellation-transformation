@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Graphe des dépendances – DMS Constellation</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.2/dist/vis-network.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: #2c5e2e; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .header h1 { font-size: 24px; }
+        .back-btn { background: rgba(255,255,255,0.2); color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; }
+        .controls { padding: 15px 20px; background: #f8f9fa; border-bottom: 1px solid #ddd; display: flex; gap: 15px; flex-wrap: wrap; align-items: center; }
+        select, button { padding: 6px 12px; border-radius: 6px; border: 1px solid #ccc; background: white; cursor: pointer; }
+        button { background: #2c5e2e; color: white; border: none; }
+        button:hover { background: #1a4d1a; }
+        .network-container { height: 650px; background: #fafafa; }
+        .legend { padding: 15px 20px; background: #f8f9fa; border-top: 1px solid #ddd; display: flex; gap: 20px; flex-wrap: wrap; font-size: 12px; }
+        .legend span { display: inline-block; width: 16px; height: 16px; border-radius: 50%; margin-right: 5px; }
+        .stats { font-size: 12px; color: #666; margin-top: 5px; }
+        .footer { padding: 15px 20px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div>
+            <h1>📊 Graphe des dépendances documentaires</h1>
+            <div class="stats">DMS Constellation – V4 – 30 documents</div>
+        </div>
+        <a href="index.html" class="back-btn">← Retour au Control Tower</a>
+    </div>
+
+    <div class="controls">
+        <label>🔍 Filtre :</label>
+        <select id="filterSelect">
+            <option value="all">Tous les documents</option>
+            <option value="governance">Gouvernance (00_GOVERNANCE)</option>
+            <option value="engine">Transformation (01_TRANSFORMATION_ENGINE)</option>
+            <option value="decision">Décision (02_DECISION_SYSTEM)</option>
+            <option value="pmo">PMO (04_PMO)</option>
+            <option value="finance">Finance (05_OPERATIONNEL_FINANCE)</option>
+        </select>
+        <button id="resetView">🔄 Réinitialiser la vue</button>
+    </div>
+
+    <div id="network" class="network-container"></div>
+
+    <div class="legend">
+        <div><span style="background: #2c5e2e;"></span> Document actif</div>
+        <div><span style="background: #ff9800;"></span> Document en brouillon</div>
+        <div><span style="background: #f44336;"></span> Document obsolète</div>
+        <div><span style="background: #2196f3;"></span> Dépendance (lien)</div>
+    </div>
+
+    <div class="footer">
+        <p>💡 Astuce : Glissez-déposez pour déplacer la vue • Molette pour zoomer • Cliquez sur un nœud pour voir le nom complet</p>
+    </div>
+</div>
+
+<script>
+    // Données des documents par groupe
+    const documents = {
+        governance: ["README_racine", "DATA_CONTRACT", "Operating_Model_DAF", "Charte_gouvernance", "Regles_decision_COMEX", "Principes_M_Q_C", "CHARTE_COMEX"],
+        engine: ["Plan_transformation_V8", "TRF_MAIN", "Executive_summary", "Donnees_financieres", "Diagnostic_SI", "Risques_juridiques", "Organisation_actuelle"],
+        decision: ["DECISION_TRACE", "COMEX_decisions_actees", "Arbitrages_M_Q_C", "Overrides_traces"],
+        pmo: ["Gantt_detail", "RAID_log", "Suivi_quotidien"],
+        finance: ["Processus_comptables", "Cloture_consolidee", "Tresorerie", "Controle_de_gestion"]
+    };
+
+    // Couleurs par groupe
+    const groupColors = {
+        governance: '#2c5e2e',
+        engine: '#1565c0',
+        decision: '#6a1b9a',
+        pmo: '#e65100',
+        finance: '#00838f'
+    };
+
+    // Créer les nœuds
+    let allNodes = [];
+    let nodesByGroup = {};
+
+    for (const [group, docs] of Object.entries(documents)) {
+        nodesByGroup[group] = docs.map(doc => ({
+            id: doc,
+            label: doc,
+            group: group,
+            color: groupColors[group],
+            title: `📄 ${doc}\n📁 Dossier: ${group}\n📌 Statut: Actif`,
+            size: 15
+        }));
+        allNodes = allNodes.concat(nodesByGroup[group]);
+    }
+
+    // Dépendances (relations entre documents)
+    const edgesData = [
+        { from: "DECISION_TRACE", to: "Regles_decision_COMEX" },
+        { from: "Arbitrages_M_Q_C", to: "Principes_M_Q_C" },
+        { from: "COMEX_decisions_actees", to: "Regles_decision_COMEX" },
+        { from: "Operating_Model_DAF", to: "Charte_gouvernance" },
+        { from: "Plan_transformation_V8", to: "TRF_MAIN" },
+        { from: "TRF_MAIN", to: "Executive_summary" },
+        { from: "DATA_CONTRACT", to: "README_racine" },
+        { from: "Gantt_detail", to: "RAID_log" },
+        { from: "Processus_comptables", to: "Cloture_consolidee" }
+    ];
+
+    const edges = edgesData.map(edge => ({
+        from: edge.from,
+        to: edge.to,
+        title: `${edge.from} → ${edge.to}`,
+        color: '#2196f3',
+        arrows: { to: { enabled: true, scaleFactor: 0.8 } },
+        width: 2,
+        smooth: { type: 'continuous', roundness: 0.5 }
+    }));
+
+    // Configuration du réseau
+    const container = document.getElementById('network');
+    let network;
+
+    function initNetwork(nodes) {
+        const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
+        const options = {
+            nodes: {
+                shape: 'dot',
+                scaling: { min: 14, max: 30, label: { enabled: true } },
+                font: { size: 11, face: 'Segoe UI' }
+            },
+            edges: {
+                smooth: { type: 'continuous', roundness: 0.5 }
+            },
+            physics: {
+                stabilization: { iterations: 100 },
+                barnesHut: { gravitationalConstant: -3000, springConstant: 0.002 }
+            },
+            interaction: {
+                hover: true,
+                tooltipDelay: 200,
+                navigationButtons: false,
+                zoomView: true,
+                dragView: true
+            }
+        };
+        network = new vis.Network(container, data, options);
+        setTimeout(() => network.fit(), 500);
+    }
+
+    // Initialisation avec tous les nœuds
+    initNetwork(allNodes);
+
+    // Filtre
+    document.getElementById('filterSelect').addEventListener('change', (e) => {
+        const filter = e.target.value;
+        if (filter === 'all') {
+            initNetwork(allNodes);
+        } else {
+            initNetwork(nodesByGroup[filter] || []);
+        }
+    });
+
+    // Réinitialiser la vue
+    document.getElementById('resetView').addEventListener('click', () => {
+        network.fit();
+    });
+</script>
+</body>
+</html>

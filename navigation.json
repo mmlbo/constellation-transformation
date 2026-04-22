@@ -1,0 +1,7 @@
+﻿{
+  "dms_version": "V8.2.2",
+  "generated": "2026-04-22",
+  "sections": [
+    { "name": "00_GOVERNANCE", "path": "00_GOVERNANCE/index.html" },\n    { "name": "01_TRANSFORMATION_ENGINE", "path": "01_TRANSFORMATION_ENGINE/index.html" },\n    { "name": "02_DECISION_SYSTEM", "path": "02_DECISION_SYSTEM/index.html" },\n    { "name": "03_AUDIT_READY", "path": "03_AUDIT_READY/index.html" },\n    { "name": "04_PMO", "path": "04_PMO/index.html" },\n    { "name": "05_OPERATIONNEL_FINANCE", "path": "05_OPERATIONNEL_FINANCE/index.html" },\n    { "name": "06_DATA_SYSTEM", "path": "06_DATA_SYSTEM/index.html" },\n    { "name": "07_KPI_REPORTING", "path": "07_KPI_REPORTING/index.html" },\n    { "name": "REFERENTIEL_DOCS", "path": "REFERENTIEL_DOCS/index.html" },\n    { "name": "GUIDE_DE_NOMMAGE", "path": "GUIDE_DE_NOMMAGE/index.html" },\n    { "name": "99_ARCHIVE", "path": "99_ARCHIVE/index.html" }
+  ]
+}
